@@ -44,6 +44,27 @@ class Student
      */
     private $isPiano;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="school",type= "string")
+     */
+    private $school;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="parent",type= "string")
+     */
+    private $parent;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="instrument",type= "string")
+     */
+    private $instrument;
+
 
     /**
      * Get id
@@ -127,6 +148,79 @@ class Student
     public function getIsPiano()
     {
         return $this->isPiano;
+    }
+
+
+    /**
+     * Set school
+     *
+     * @param string $school
+     *
+     * @return Student
+     */
+    public function setSchool($school)
+    {
+        $this->school = $school;
+
+        return $this;
+    }
+
+    /**
+     * Get school
+     *
+     * @return string
+     */
+    public function getSchool()
+    {
+        return $this->school;
+    }
+
+    /**
+     * Set parent
+     *
+     * @param string $parent
+     *
+     * @return Student
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    /**
+     * Get instrument
+     *
+     * @return string
+     */
+    public function getInstrument()
+    {
+        return $this->instrument;
+    }
+
+    /**
+     * Set instrument
+     *
+     * @param string $instrument
+     *
+     * @return Student
+     */
+    public function setInstrument($instrument)
+    {
+        $this->instrument = $instrument;
+
+        return $this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return string
+     */
+    public function getParent($parent)
+    {
+        return $this->parent;
     }
 
     public  function toArray()

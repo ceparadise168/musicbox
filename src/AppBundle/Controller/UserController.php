@@ -24,9 +24,12 @@ class UserController extends Controller
         $now = new \ DateTime();
 
         $student = new Student();
-        $student->setName('test');
-        $student->setCreatedAt($now);
-        $student->setIsPiano(false);
+        $student->setName('test')
+            ->setCreatedAt($now)
+            ->setIsPiano(false)
+            ->setParent('papa')
+            ->setSchool('c')
+            ->setInstrument('piano');
 
         // tells Doctrine you want to (eventually) save the $student (no queries yet)
         $em->persist($student);
